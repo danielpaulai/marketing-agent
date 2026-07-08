@@ -177,38 +177,58 @@
       <p class="n">THE MAP</p>
       <h2>Install &rarr; Extract &rarr; Create &rarr; Connect &rarr; Automate</h2>
       <p>That is the whole system. You already installed. Now: extract your Voice DNA once, create with the skills daily, connect research when you are ready, and automate it with a routine. Each step below has the exact prompt to paste.</p>
+      <p class="note"><strong>Where this works:</strong> the plugin's skills run in Claude Code, in Cowork, AND in regular Claude chat (web and desktop). To call a skill anywhere, type <code class="k">/</code> in the message box (a skill picker opens, pick extract-voice, write-post, and so on), click the <strong>+</strong> button, or just describe what you want in plain words. All three fire the same skill.</p>
     </div>
 
     <div class="step">
       <p class="n">FLOW 1</p>
       <h2>Get measured: extract your Voice DNA</h2>
       <p>Start a <strong>new session</strong> in Claude Code and choose a folder for your agent to live in. Make a new one called <strong>my-marketing-agent</strong>. This folder is your agent's home, everything it learns lives here.</p>
-      <p><strong>Gather your raw material first</strong> (10 minutes of copy-paste): 5 or more posts you wrote yourself, one voice note or call transcript (90+ seconds of you talking), and a few DM or email replies to real clients. The messier and more human, the better.</p>
-      <p>Then paste this:</p>
+
+      <h3>What to gather first (10 minutes of copy-paste)</h3>
+      <ul>
+        <li><strong>5 or more posts you wrote yourself</strong> (10 to 20 is better): LinkedIn, X, Instagram captions, newsletters. Your words, not a ghostwriter's.</li>
+        <li><strong>One voice note or call transcript</strong>, at least 90 seconds of you talking. A meeting transcript works. This captures your real spoken rhythm, it is the highest-value input.</li>
+        <li><strong>3 to 10 DM or email replies to real clients</strong>. This is your plain explaining voice.</li>
+        <li><strong>Brand basics</strong>: one accent color (hex code), light or dark preference, your name, a one-line tagline.</li>
+      </ul>
+      <p class="note">Minimum to proceed: 5 posts or 500 total words. Below that the skill will tell you the samples are too thin and ask for more. Missing the transcript? It proceeds anyway and marks that layer to regenerate later. The messier and more human your samples, the better the extraction.</p>
+
+      <h3>The prompt</h3>
       <blockquote><button class="copy">Copy</button>Extract my voice. Here is my raw material: [paste your 5+ posts, your transcript, and a few client replies]. My brand accent color is [hex or "pick one for me"], my name is [name], and my one-line tagline is [tagline].</blockquote>
+
+      <h3>What the skill actually does (so you know it worked)</h3>
+      <ul>
+        <li><strong>Analyzes 7 layers with counted evidence</strong>, not vague adjectives: your conversational markers and their frequency, sentence patterns (short/medium/long percentages and your rhythm), vocabulary you use often, words you NEVER use, signature phrases (transitions, emphasis, closers), your beliefs and themes, your energy and role, and your format habits.</li>
+        <li><strong>Saves VOICE-DNA.md</strong> in your folder with 9 sections, including your brand (section 8) and your business (section 9: what you sell, to whom, the result, your content pillars). Sections 8 and 9 are what power the visual skills and the daily idea engine.</li>
+        <li><strong>Proves it immediately:</strong> writes one short sample post using only the DNA file and scores it on the Invisibility Diagnostic (Voice, POV, Specificity, Asking). You should see a 4/4.</li>
+        <li><strong>Builds your DNA profile</strong>, an animated page with your stats counting up, your most-used words, your banned list, your rhythm bars, and the validation badge. Screenshot it, that is your voice, captured.</li>
+      </ul>
       <div class="shot">
         <div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Claude Code &middot; my-marketing-agent</span></div>
         <div class="body">
           <div class="chat-you">Extract my voice. Here is my raw material: [5 posts, 1 transcript, 4 replies]...</div>
-          <div class="chat-ai">Analyzing 2,400 words across 10 samples...<br><span class="mono">✓ VOICE-DNA.md saved</span><br>Your top marker: "look" (used 31 times). 58% of your sentences are under 9 words. Here is a sample post in your voice, scored 4/4 on the Invisibility Diagnostic. Does this sound like you?</div>
+          <div class="chat-ai">Analyzing 2,400 words across 10 samples...<br><span class="mono">✓ VOICE-DNA.md saved &middot; sample post scored 4/4</span><br>Your top marker: "look" (used 31 times). 58% of your sentences are under 9 words. Here is a sample post in your voice. Does this sound like you?</div>
         </div>
       </div>
-      <p class="caption">It saves VOICE-DNA.md, proves it with a scored sample, then builds your animated DNA profile</p>
-      <p><strong>What you get:</strong> <code class="k">VOICE-DNA.md</code> (the ledger every skill reads) and an animated Voice DNA profile page, your words analyzed, your banned list, your rhythm, with a validation score. Screenshot it, that is your voice, captured.</p>
-      <p class="note">If the sample post does not sound like you, say exactly what is off ("too formal", "I never say that word"). It tunes the DNA file, not just the sample, then re-proves it.</p>
+      <p class="caption">Extraction, validation, then the animated DNA profile</p>
+
+      <h3>If it does not sound like you: the tuning prompts</h3>
+      <blockquote><button class="copy">Copy</button>Tune my Voice DNA. What is off: [say it plainly, for example "too formal, I never say leverage, my sentences are shorter than this"]. Fix the DNA file, not just the sample, then show me a new sample post.</blockquote>
+      <blockquote><button class="copy">Copy</button>Update my Voice DNA with this new material: [paste a new transcript or posts]. Re-analyze, update the file, and show me what changed.</blockquote>
     </div>
 
     <div class="step">
-      <p class="n">FLOW 2</p>
-      <h2>Write your first post, in detail</h2>
-      <p>Same folder, same session or a new one. Paste:</p>
-      <blockquote><button class="copy">Copy</button>Write me a post about [your topic, plus any raw material: a story, a result, a belief, a lesson].</blockquote>
+      <p class="n">FLOW 2A &middot; WRITE-POST</p>
+      <h2>Write a post, in full detail</h2>
+      <h3>The prompt</h3>
+      <blockquote><button class="copy">Copy</button>Write me a post about [your topic]. Raw material: [a story, a result, a belief, or a lesson, in your own rough words].</blockquote>
       <p><strong>What happens, beat by beat:</strong></p>
       <ul>
-        <li><strong>The 5 hooks come first.</strong> Five different psychological angles (Result Lead, Confession, Contrarian, Curiosity Gap, Pattern Interrupt), each under 12 words. Pick a number, or say "use the strongest one".</li>
-        <li><strong>The post gets written in YOUR voice</strong>, hook unchanged, a rehook line, short paragraphs, one CTA, and a P.S. It reads your VOICE-DNA.md before writing a word.</li>
-        <li><strong>It scores itself</strong> on the Invisibility Diagnostic (Voice, POV, Specificity, Asking). Below 4/4, it fixes and rescores before you ever see it.</li>
-        <li><strong>You get 3 pinned comment options</strong> and an animated LinkedIn-style preview card of your post.</li>
+        <li><strong>The 5-hook gate comes first.</strong> Five hooks, five psychological types (Result Lead, Confession, Contrarian Challenge, Curiosity Gap, Pattern Interrupt), each under 12 words. Reply with a number, or say "use the strongest one".</li>
+        <li><strong>The post is written in YOUR voice</strong>: your chosen hook unchanged, a rehook line that deepens the tension, body paragraphs of 3 lines max, exactly one CTA, and a P.S. as the most human line. 1,300 to 1,500 characters. It reads VOICE-DNA.md before writing a word and kills every pattern on the AI blacklist.</li>
+        <li><strong>It scores itself</strong> on the Invisibility Diagnostic and fixes anything below 4/4 before you see it.</li>
+        <li><strong>You get 3 pinned comment options</strong> (a bonus insight, an audience question, a soft plug) and an animated LinkedIn-style preview card with the score badge.</li>
       </ul>
       <div class="shot">
         <div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Claude Code &middot; write-post</span></div>
@@ -218,15 +238,49 @@
         </div>
       </div>
       <p class="caption">The 5-hook gate, then the full post, scored 4/4 before delivery</p>
-      <p><strong>Then try the rest of the toolkit:</strong></p>
-      <table>
-        <thead><tr><th>Say this</th><th>What you get</th></tr></thead>
-        <tbody>
-          <tr><td>"Make me a carousel about X"</td><td>The full deck, a designed preview of every slide, then one image prompt per slide</td></tr>
-          <tr><td>"Image post about X"</td><td>One complete, on-brand image prompt to paste into any image tool</td></tr>
-          <tr><td>"Build my offer"</td><td>A guided interview, then your OFFER DIAMOND SCORE out of 100, then the rescore loop (watch 54 become 91), then a beautiful animated offer document</td></tr>
-        </tbody>
-      </table>
+      <h3>More prompts for this skill</h3>
+      <blockquote><button class="copy">Copy</button>Plan 5 post ideas for this week. For each: a working hook under 12 words and one sentence on the angle. Specific to my business, mixed formats.</blockquote>
+      <blockquote><button class="copy">Copy</button>Make it a story post: vulnerable, open mid-scene at the tensest moment, a clear turning point, one universal lesson.</blockquote>
+      <blockquote><button class="copy">Copy</button>Refine this post: [one instruction, for example "sharper hook" or "aim it at founders, not marketers"]. Change only what is needed, keep my voice and the length.</blockquote>
+    </div>
+
+    <div class="step">
+      <p class="n">FLOW 2B &middot; BUILD-CAROUSEL</p>
+      <h2>Build a carousel</h2>
+      <h3>The prompt</h3>
+      <blockquote><button class="copy">Copy</button>Make me a LinkedIn carousel about [topic], 6 slides. Use my brand from VOICE-DNA.md.</blockquote>
+      <p><strong>The flow:</strong></p>
+      <ul>
+        <li><strong>1. The deck comes first</strong>: cover hook, body slides, CTA slide, plus a caption. You approve or tweak before anything else happens. Say "slide 3 needs a stronger title" and it fixes just that.</li>
+        <li><strong>2. The designed preview</strong>: every slide rendered as styled cards in your palette, so you SEE the whole carousel before spending a single image generation.</li>
+        <li><strong>3. One image prompt per slide</strong>, numbered, in copyable blocks, each repeating the shared template so the set looks like ONE cohesive deck.</li>
+        <li><strong>4. You produce it</strong>: paste each prompt into your image tool at 1088x1360 (4:5 portrait), then combine the finished images into a single PDF and post it on LinkedIn as a document.</li>
+      </ul>
+      <p class="note">Instagram instead? Say so, it drops the LinkedIn header, keeps it cleaner, square or 4:5.</p>
+    </div>
+
+    <div class="step">
+      <p class="n">FLOW 2C &middot; IMAGE-POST</p>
+      <h2>One image post</h2>
+      <h3>The prompt</h3>
+      <blockquote><button class="copy">Copy</button>Image post about [concept]. Platform: [LinkedIn or Instagram]. Text that must appear on the image: [your headline or stat, verbatim].</blockquote>
+      <ul>
+        <li>You get ONE complete, self-contained image prompt: exact size (1088x1360 LinkedIn portrait, 1088x1088 Instagram square), your brand colors, the text rendered verbatim with key words in your accent, and composition notes.</li>
+        <li>Paste it into any image model you already use (gpt-image, Midjourney, DALL-E). Regenerate with small wording tweaks to steer.</li>
+        <li>Ask for "a quick layout mock first" if you want to sanity-check the design before generating, or "3 headline variations" for options.</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <p class="n">FLOW 2D &middot; BUILD-OFFER</p>
+      <h2>Build your offer (and watch the score climb)</h2>
+      <h3>The prompt</h3>
+      <blockquote><button class="copy">Copy</button>Build my offer.</blockquote>
+      <p><strong>What happens:</strong> a guided interview through 6 milestones, one at a time: your diagnosis (what you sell now and how it converts), your 10-word promise, your 10-second guarantee, your bonus stack, your payment plan, and your real reason to act now. Answer honestly, it coaches weak answers in a sentence or two.</p>
+      <p><strong>Then the Diamond Score, out of 100:</strong> every facet scored with points and a traffic light (Promise and Guarantee are worth 30 each, they count double), one honest line per facet quoting your own words, and the single highest-leverage fix. Then <strong>the rescore loop</strong>: fix the weakest lever together, rescore, watch the number move. "54 &rarr; 78. That one fix bought you 24 points." Keep going to 90+.</p>
+      <p><strong>The payoff:</strong> a complete, animated offer document with the Diamond on the cover, every facet colored, your score counting up, and your journey line (54 &rarr; 78 &rarr; 91) rendered on it.</p>
+      <h3>Already have an offer? Score it first</h3>
+      <blockquote><button class="copy">Copy</button>Score my offer on the Diamond: [paste your current offer exactly as you say it on a call, unpolished].</blockquote>
     </div>
 
     <div class="step">
