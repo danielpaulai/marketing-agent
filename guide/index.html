@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Install Your Marketing Agent | Step by Step</title>
+<title>Your Marketing Agent | Install + The Flow</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -14,39 +14,67 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{font-family:"Rethink Sans",-apple-system,sans-serif;background:var(--paper);color:var(--body);line-height:1.6;font-size:17px}
-  .wrap{max-width:760px;margin:0 auto;padding:64px 24px 96px}
+  .wrap{max-width:780px;margin:0 auto;padding:56px 24px 96px}
   .micro{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:11.5px;color:var(--red);font-weight:700}
-  h1{font-size:clamp(34px,6vw,52px);font-weight:800;color:var(--ink);letter-spacing:-.02em;line-height:1.08;margin:14px 0 16px;text-wrap:balance}
+  h1{font-size:clamp(32px,6vw,50px);font-weight:800;color:var(--ink);letter-spacing:-.02em;line-height:1.08;margin:14px 0 16px;text-wrap:balance}
   h1 .red{color:var(--red)}
   .lede{font-size:19px;color:var(--muted);max-width:52ch}
-  .rule{height:2px;background:var(--red);width:56px;margin:40px 0}
+  .rule{height:2px;background:var(--red);width:56px;margin:36px 0 28px}
 
-  .step{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:22px;box-shadow:0 1px 3px rgba(23,23,27,.04)}
+  /* tabs */
+  .tabs{display:flex;gap:8px;margin-bottom:28px;border-bottom:2px solid var(--border);position:sticky;top:0;background:var(--paper);z-index:20;padding-top:8px}
+  .tab{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:12px 20px;cursor:pointer;border:none;background:none;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px}
+  .tab.active{color:var(--red);border-bottom-color:var(--red)}
+  .panel{display:none}
+  .panel.active{display:block}
+
+  .step{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:30px;margin-bottom:22px;box-shadow:0 1px 3px rgba(23,23,27,.04)}
   .step .n{font-family:var(--mono);font-size:12px;color:var(--red);font-weight:700;letter-spacing:.14em}
-  .step h2{font-size:24px;font-weight:800;color:var(--ink);margin:8px 0 10px;letter-spacing:-.01em}
+  .step h2{font-size:23px;font-weight:800;color:var(--ink);margin:8px 0 10px;letter-spacing:-.01em}
+  .step h3{font-size:17px;font-weight:800;color:var(--ink);margin:18px 0 6px}
   .step p{margin-bottom:12px}
   .step p strong{color:var(--ink)}
   .step .note{font-size:14.5px;color:var(--muted);border-left:3px solid var(--border);padding-left:14px;margin-top:14px}
+  .step ul{margin:0 0 12px 20px}
+  .step li{margin-bottom:6px}
+  code.k{font-family:var(--mono);font-size:14px;background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:2px 8px}
 
-  pre{background:var(--ink);color:#F5F4F1;border-radius:10px;padding:18px 56px 18px 20px;font-family:var(--mono);font-size:14px;line-height:1.9;overflow-x:auto;position:relative;margin:14px 0}
-  pre .c{color:#8a8a94}
+  pre{background:var(--ink);color:#F5F4F1;border-radius:10px;padding:18px 56px 18px 20px;font-family:var(--mono);font-size:13.5px;line-height:1.8;overflow-x:auto;position:relative;margin:14px 0;white-space:pre-wrap}
   .copy{position:absolute;top:10px;right:10px;background:#2C2C32;color:#F5F4F1;border:1px solid #44444c;border-radius:7px;font-family:var(--mono);font-size:11px;padding:5px 10px;cursor:pointer}
   .copy:hover{background:var(--red);border-color:var(--red)}
-
-  blockquote{background:var(--red-soft);border-left:3px solid var(--red);border-radius:0 10px 10px 0;padding:16px 20px;font-size:16px;color:var(--ink);margin:14px 0;position:relative}
+  blockquote{background:var(--red-soft);border-left:3px solid var(--red);border-radius:0 10px 10px 0;padding:16px 48px 16px 20px;font-size:15.5px;color:var(--ink);margin:14px 0;position:relative}
   blockquote .copy{background:#fff;color:var(--ink);border-color:var(--border)}
   blockquote .copy:hover{color:#fff}
 
-  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15.5px}
-  th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0 12px 10px 0;border-bottom:2px solid var(--border)}
-  td{padding:12px 12px 12px 0;border-bottom:1px solid var(--border);vertical-align:top}
-  td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
-  td code{font-family:var(--mono);font-size:13px;background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:2px 8px}
+  /* mock UI frames ("screenshots") */
+  .shot{border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:16px 0;background:#FDFDFC;box-shadow:0 2px 10px rgba(23,23,27,.06)}
+  .shot .bar{display:flex;align-items:center;gap:6px;background:#EFEDE8;padding:9px 14px;border-bottom:1px solid var(--border)}
+  .shot .dot{width:10px;height:10px;border-radius:50%;background:#D6D3CC}
+  .shot .bar span{font-family:var(--mono);font-size:11px;color:var(--muted);margin-left:8px}
+  .shot .body{padding:18px 20px;font-size:14.5px}
+  .shot .row{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border:1px solid var(--border);border-radius:8px;margin-bottom:8px;color:var(--body)}
+  .shot .row.hi{border-color:var(--red);background:var(--red-soft);font-weight:700;color:var(--ink)}
+  .shot .tag{font-family:var(--mono);font-size:10.5px;background:var(--red);color:#fff;border-radius:4px;padding:2px 7px}
+  .shot .field{font-family:var(--mono);font-size:12.5px;border:1.5px dashed var(--red);border-radius:8px;padding:10px 12px;color:var(--ink);background:#fff;margin:8px 0}
+  .shot .btn{display:inline-block;background:var(--red);color:#fff;font-weight:700;font-size:13.5px;border-radius:8px;padding:8px 18px}
+  .shot .chat-you{background:var(--red-soft);border-radius:10px 10px 2px 10px;padding:10px 14px;margin:8px 0 8px 60px;font-size:13.5px;color:var(--ink)}
+  .shot .chat-ai{background:var(--paper);border:1px solid var(--border);border-radius:10px 10px 10px 2px;padding:10px 14px;margin:8px 60px 8px 0;font-size:13.5px}
+  .shot .chat-ai .mono{font-family:var(--mono);font-size:12px;color:var(--green)}
+  .caption{font-size:13px;color:var(--muted);text-align:center;margin:-8px 0 16px;font-family:var(--mono)}
 
-  .trigger{display:flex;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--border)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0 12px 10px 0;border-bottom:2px solid var(--border)}
+  td{padding:11px 12px 11px 0;border-bottom:1px solid var(--border);vertical-align:top}
+  td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+
+  .trigger{display:flex;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--border)}
   .trigger:last-child{border-bottom:none}
   .trigger .tn{font-family:var(--mono);color:var(--red);font-weight:700;font-size:13px;white-space:nowrap}
   .trigger p{margin:0}
+
+  .checklist{list-style:none;margin:12px 0 !important}
+  .checklist li{display:flex;gap:10px;margin-bottom:9px;align-items:baseline}
+  .checklist .bx{flex:none;width:14px;height:14px;border:2px solid var(--red);border-radius:4px;position:relative;top:2px}
 
   details{border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:10px;background:var(--card)}
   summary{font-weight:700;color:var(--ink);cursor:pointer}
@@ -54,79 +82,227 @@
 
   footer{text-align:center;margin-top:56px;color:var(--muted);font-size:14px}
   footer .micro{display:block;margin-bottom:6px}
+  @media(max-width:560px){.shot .chat-you{margin-left:20px}.shot .chat-ai{margin-right:20px}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <p class="micro">The AI Marketing Agent Summit &middot; Take-Home Guide</p>
-  <h1>Install your <span class="red">Marketing Agent</span></h1>
-  <p class="lede">Five skills, one voice file, zero API keys. Ten minutes from here to an agent that writes like you. Measured once, fits forever.</p>
+  <h1>Your <span class="red">Marketing Agent</span></h1>
+  <p class="lede">Five skills, one voice file, zero API keys to start. Tab 1 installs it. Tab 2 is the full flow, from first prompt to a 7am agent that works while you sleep.</p>
   <div class="rule"></div>
 
-  <div class="step">
-    <p class="n">BEFORE YOU START</p>
-    <h2>Two things you need</h2>
-    <p><strong>1. A paid Claude plan (Pro or Max).</strong> Claude Code comes built into the desktop app on paid plans. The free plan does not include it, so upgrade first at <strong>claude.ai</strong> or you will only see the chat.</p>
-    <p><strong>2. The Claude Desktop app.</strong> Download it at <strong>claude.ai/download</strong>, install it like any normal app, and sign in. Claude Code is already inside, there is nothing extra to set up.</p>
-    <p>That is everything. No terminal, no developer tools, no API keys, no separate Claude Code install.</p>
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-panel="install">1 &middot; Install</button>
+    <button class="tab" data-panel="flow">2 &middot; The Flow</button>
   </div>
 
-  <div class="step">
-    <p class="n">STEP 1</p>
-    <h2>Install the plugin (three clicks, no terminal)</h2>
-    <p>Open the Claude Desktop app, then:</p>
-    <p>1. Open <strong>Settings, then Customize</strong>, and find <strong>Plugins</strong>.<br>
-    2. Choose <strong>Add marketplace</strong> (from a repository) and paste this URL:</p>
-    <blockquote><button class="copy">Copy</button>https://github.com/danielpaulai/marketing-agent</blockquote>
-    <p>3. Find <strong>marketing-agent</strong> in the list and click <strong>Install</strong>.</p>
-    <p>Done. The app pulls the plugin straight from the repository. No API keys, no connectors, nothing to configure.</p>
-    <p class="note">Prefer zero installs? Download the ZIP from github.com/danielpaulai/marketing-agent (green Code button, Download ZIP), unzip it, and open that folder in Claude Code. The skills work right there, no install at all.</p>
+  <!-- ============ TAB 1: INSTALL ============ -->
+  <div class="panel active" id="install">
+
+    <div class="step">
+      <p class="n">BEFORE YOU START</p>
+      <h2>Two things you need</h2>
+      <p><strong>1. A paid Claude plan (Pro or Max).</strong> Claude Code comes built into the desktop app on paid plans. The free plan does not include it, so upgrade first at <strong>claude.ai</strong> or you will only see the chat.</p>
+      <p><strong>2. The Claude Desktop app.</strong> Download it at <strong>claude.ai/download</strong>, install it like any normal app, and sign in. Claude Code is already inside, there is nothing extra to set up.</p>
+      <p>That is everything. No terminal, no developer tools, no API keys, no separate Claude Code install.</p>
+    </div>
+
+    <div class="step">
+      <p class="n">STEP 1 OF 3</p>
+      <h2>Open the plugin manager</h2>
+      <p>In the Claude Desktop app, open <strong>Settings</strong>, then <strong>Customize</strong>, and find <strong>Plugins</strong>.</p>
+      <div class="shot">
+        <div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Claude &middot; Settings</span></div>
+        <div class="body">
+          <div class="row">General</div>
+          <div class="row">Connectors</div>
+          <div class="row hi">Customize &nbsp;&rsaquo;&nbsp; Plugins <span class="tag">CLICK HERE</span></div>
+          <div class="row">Extensions</div>
+        </div>
+      </div>
+      <p class="caption">Settings &rsaquo; Customize &rsaquo; Plugins</p>
+    </div>
+
+    <div class="step">
+      <p class="n">STEP 2 OF 3</p>
+      <h2>Add the marketplace</h2>
+      <p>Click <strong>Add marketplace</strong> (from a repository) and paste this URL:</p>
+      <blockquote><button class="copy">Copy</button>https://github.com/danielpaulai/marketing-agent</blockquote>
+      <div class="shot">
+        <div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Plugins &middot; Add marketplace</span></div>
+        <div class="body">
+          <p style="font-weight:700;color:var(--ink);margin-bottom:6px">Add marketplace from repository</p>
+          <div class="field">https://github.com/danielpaulai/marketing-agent</div>
+          <span class="btn">Add</span>
+        </div>
+      </div>
+      <p class="caption">Paste the URL, click Add</p>
+    </div>
+
+    <div class="step">
+      <p class="n">STEP 3 OF 3</p>
+      <h2>Install marketing-agent</h2>
+      <p>Find <strong>marketing-agent</strong> in the plugin list and click <strong>Install</strong>. Done, no configuration screen follows.</p>
+      <div class="shot">
+        <div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Plugins &middot; Browse</span></div>
+        <div class="body">
+          <div class="row hi">marketing-agent<br><small style="font-weight:400;color:var(--muted)">Your Marketing Agent OS. Voice DNA + 4 skills.</small> <span class="btn" style="padding:6px 14px;font-size:12.5px">Install</span></div>
+        </div>
+      </div>
+      <p class="caption">One click. The app pulls it straight from the repository.</p>
+      <p class="note">Prefer zero installs? Download the ZIP from github.com/danielpaulai/marketing-agent (green Code button, Download ZIP), unzip it, and open that folder in Claude Code. The skills work right there, no install at all.</p>
+    </div>
+
+    <div class="step">
+      <p class="n">TROUBLE?</p>
+      <h2>Quick fixes</h2>
+      <details><summary>I cannot find Plugins in the app</summary><p>Look under Settings, then Customize, then Plugins. If you do not see it, you are likely on the free plan (Claude Code needs Pro or Max) or the app needs an update. In a terminal session of Claude Code, typing /plugin opens the same manager.</p></details>
+      <details><summary>The marketplace will not add</summary><p>Check the URL is exactly <code class="k">https://github.com/danielpaulai/marketing-agent</code> and that you are online, then update the app and retry.</p></details>
+      <details><summary>I installed but nothing changed</summary><p>Plugins load when a session starts. Start a new session (or restart the app) and the skills are live.</p></details>
+    </div>
+
+    <p style="text-align:center;margin-top:8px"><button class="tab" style="border:1px solid var(--border);border-radius:10px;padding:14px 26px" onclick="document.querySelector('[data-panel=flow]').click();window.scrollTo({top:0})">Installed? Go to Tab 2, The Flow &rarr;</button></p>
   </div>
 
-  <div class="step">
-    <p class="n">STEP 2</p>
-    <h2>Get measured (once)</h2>
-    <p>In the Claude Code desktop app, start a <strong>new session</strong> and choose a folder for your agent to live in. Make a new folder called <strong>my-marketing-agent</strong> when it asks where to work. This folder is your agent's home, everything it learns lives here.</p>
-    <p>Then say this, and attach or paste your material:</p>
-    <blockquote><button class="copy">Copy</button>Extract my voice. Here are 5 posts I wrote, a transcript of me talking, and a few client replies.</blockquote>
-    <p>The agent interviews you, analyzes your real writing, and saves <strong>VOICE-DNA.md</strong> in the folder. That file is the ledger. Every skill reads it first, so you never answer voice questions again.</p>
-    <p class="note">Bring real material: 5+ posts you wrote yourself, one voice note or call transcript, a few DM or email replies. The messier and more human, the better the extraction.</p>
-  </div>
+  <!-- ============ TAB 2: THE FLOW ============ -->
+  <div class="panel" id="flow">
 
-  <div class="step">
-    <p class="n">STEP 3</p>
-    <h2>Run your skills</h2>
-    <table>
-      <thead><tr><th>Skill</th><th>What you get</th><th>Say this</th></tr></thead>
-      <tbody>
-        <tr><td>extract-voice</td><td>Your VOICE-DNA.md, the ledger</td><td>"Extract my voice"</td></tr>
-        <tr><td>write-post</td><td>A post in your voice + an animated preview</td><td>"Write me a post about X"</td></tr>
-        <tr><td>image-post</td><td>A ready-to-paste image prompt, on brand</td><td>"Image post about X"</td></tr>
-        <tr><td>build-carousel</td><td>A full carousel deck + a prompt per slide</td><td>"Make me a carousel about X"</td></tr>
-        <tr><td>build-offer</td><td>A guided interview + your animated offer document</td><td>"Build my offer"</td></tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="step">
+      <p class="n">THE MAP</p>
+      <h2>Install &rarr; Extract &rarr; Create &rarr; Connect &rarr; Automate</h2>
+      <p>That is the whole system. You already installed. Now: extract your Voice DNA once, create with the skills daily, connect research when you are ready, and automate it with a routine. Each step below has the exact prompt to paste.</p>
+    </div>
 
-  <div class="step">
-    <p class="n">STEP 4</p>
-    <h2>Pull the trigger, three ways</h2>
-    <div class="trigger"><span class="tn">1 &middot; THE COMMAND</span><p>Type the request yourself. You pull the trigger. Great for tonight.</p></div>
-    <div class="trigger"><span class="tn">2 &middot; THE ASK</span><p>Just describe what you need: "I need a post for tomorrow." Claude reads every skill's description and fires the right one itself.</p></div>
-    <div class="trigger"><span class="tn">3 &middot; THE CLOCK</span><p>The standing order. Say it once, it runs forever, whether you show up or not. This is what makes it an agent.</p></div>
-    <p style="margin-top:18px"><strong>Set your standing order.</strong> In Claude Code, say:</p>
-    <blockquote><button class="copy">Copy</button>Create a routine: every morning at 7am, look at my business in VOICE-DNA.md, find one fresh, on-trend content idea for it, write the post in my voice using the write-post skill, and leave the post and an image prompt for it in a file called today-post.md.</blockquote>
-    <p>You wake up, open <strong>today-post.md</strong>, read it, post it. Done before coffee.</p>
-  </div>
+    <div class="step">
+      <p class="n">FLOW 1</p>
+      <h2>Get measured: extract your Voice DNA</h2>
+      <p>Start a <strong>new session</strong> in Claude Code and choose a folder for your agent to live in. Make a new one called <strong>my-marketing-agent</strong>. This folder is your agent's home, everything it learns lives here.</p>
+      <p><strong>Gather your raw material first</strong> (10 minutes of copy-paste): 5 or more posts you wrote yourself, one voice note or call transcript (90+ seconds of you talking), and a few DM or email replies to real clients. The messier and more human, the better.</p>
+      <p>Then paste this:</p>
+      <blockquote><button class="copy">Copy</button>Extract my voice. Here is my raw material: [paste your 5+ posts, your transcript, and a few client replies]. My brand accent color is [hex or "pick one for me"], my name is [name], and my one-line tagline is [tagline].</blockquote>
+      <div class="shot">
+        <div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Claude Code &middot; my-marketing-agent</span></div>
+        <div class="body">
+          <div class="chat-you">Extract my voice. Here is my raw material: [5 posts, 1 transcript, 4 replies]...</div>
+          <div class="chat-ai">Analyzing 2,400 words across 10 samples...<br><span class="mono">✓ VOICE-DNA.md saved</span><br>Your top marker: "look" (used 31 times). 58% of your sentences are under 9 words. Here is a sample post in your voice, scored 4/4 on the Invisibility Diagnostic. Does this sound like you?</div>
+        </div>
+      </div>
+      <p class="caption">It saves VOICE-DNA.md, proves it with a scored sample, then builds your animated DNA profile</p>
+      <p><strong>What you get:</strong> <code class="k">VOICE-DNA.md</code> (the ledger every skill reads) and an animated Voice DNA profile page, your words analyzed, your banned list, your rhythm, with a validation score. Screenshot it, that is your voice, captured.</p>
+      <p class="note">If the sample post does not sound like you, say exactly what is off ("too formal", "I never say that word"). It tunes the DNA file, not just the sample, then re-proves it.</p>
+    </div>
 
-  <div class="step">
-    <p class="n">TROUBLE?</p>
-    <h2>Quick fixes</h2>
-    <details><summary>I cannot find Plugins in the app</summary><p>Look under Settings, then Customize, then Plugins. If you do not see it, you are likely on the free plan (Claude Code needs Pro or Max) or the app needs an update. In a terminal session of Claude Code, typing /plugin opens the same manager.</p></details>
-    <details><summary>The plugin install says marketplace not found</summary><p>Check the spelling: <code>danielpaulai/marketing-agent</code>. You need an internet connection, and the app should be up to date.</p></details>
-    <details><summary>My posts do not sound like me</summary><p>The ledger needs better measurements. Say "tune my Voice DNA" and tell the agent exactly what feels off, or rerun extract-voice with more real samples, especially a talking transcript.</p></details>
-    <details><summary>Where do the images come from?</summary><p>The image-post and carousel skills give you finished prompts, you paste them into any image tool you already use (gpt-image, Midjourney, and similar). No image account is required to use everything else.</p></details>
+    <div class="step">
+      <p class="n">FLOW 2</p>
+      <h2>Write your first post, in detail</h2>
+      <p>Same folder, same session or a new one. Paste:</p>
+      <blockquote><button class="copy">Copy</button>Write me a post about [your topic, plus any raw material: a story, a result, a belief, a lesson].</blockquote>
+      <p><strong>What happens, beat by beat:</strong></p>
+      <ul>
+        <li><strong>The 5 hooks come first.</strong> Five different psychological angles (Result Lead, Confession, Contrarian, Curiosity Gap, Pattern Interrupt), each under 12 words. Pick a number, or say "use the strongest one".</li>
+        <li><strong>The post gets written in YOUR voice</strong>, hook unchanged, a rehook line, short paragraphs, one CTA, and a P.S. It reads your VOICE-DNA.md before writing a word.</li>
+        <li><strong>It scores itself</strong> on the Invisibility Diagnostic (Voice, POV, Specificity, Asking). Below 4/4, it fixes and rescores before you ever see it.</li>
+        <li><strong>You get 3 pinned comment options</strong> and an animated LinkedIn-style preview card of your post.</li>
+      </ul>
+      <div class="shot">
+        <div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Claude Code &middot; write-post</span></div>
+        <div class="body">
+          <div class="chat-you">Write me a post about how I saved a client 12 hours a week with one automation.</div>
+          <div class="chat-ai"><span class="mono">HOOKS</span><br>1. Result Lead: "One automation. 12 hours back. Every week."<br>2. Confession: "I almost didn't send that proposal."<br>3. Contrarian: "Most automation advice wastes your time."<br>4. Curiosity: "The 20-minute fix nobody asks me about."<br>5. Interrupt: "Delete half your tools. Then read this."<br>&rarr; Which hook do you want to build from?</div>
+        </div>
+      </div>
+      <p class="caption">The 5-hook gate, then the full post, scored 4/4 before delivery</p>
+      <p><strong>Then try the rest of the toolkit:</strong></p>
+      <table>
+        <thead><tr><th>Say this</th><th>What you get</th></tr></thead>
+        <tbody>
+          <tr><td>"Make me a carousel about X"</td><td>The full deck, a designed preview of every slide, then one image prompt per slide</td></tr>
+          <tr><td>"Image post about X"</td><td>One complete, on-brand image prompt to paste into any image tool</td></tr>
+          <tr><td>"Build my offer"</td><td>A guided interview, then your OFFER DIAMOND SCORE out of 100, then the rescore loop (watch 54 become 91), then a beautiful animated offer document</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="step">
+      <p class="n">FLOW 3</p>
+      <h2>Connect Apify: give your agent research arms</h2>
+      <p>Your skills work with zero connectors. But connected to <strong>Apify</strong>, your agent can research what is trending in your niche TODAY and write from live data instead of memory. This is the upgrade you watched on stage. Do it at home, it takes 10 minutes.</p>
+      <h3>Set it up (once)</h3>
+      <ul>
+        <li><strong>1.</strong> Create a free account at <strong>apify.com</strong> (the free plan includes monthly credits, no card needed).</li>
+        <li><strong>2.</strong> In Claude, open <strong>Settings &rsaquo; Connectors &rsaquo; Add custom connector</strong> and paste: <code class="k">https://mcp.apify.com</code></li>
+        <li><strong>3.</strong> A browser window opens, log in to Apify and approve. That is the whole connection.</li>
+        <li><strong>4.</strong> Test it: in a new session say <em>"Using Apify, find 3 things trending in [your niche] this week."</em> If results come back, you are wired.</li>
+      </ul>
+      <h3>The Master Prompt (copy, paste, run)</h3>
+      <p>This is the full daily engine in one prompt: live research, one chosen idea, a scored post in your voice, the image prompt, all saved to a file. Run it any morning, or hand it to your routine below.</p>
+      <pre><button class="copy">Copy</button>You are my Marketing Agent, my daily content engine. Run the full production cycle now, start to finish, and do not stop to ask me questions unless a rule below forces you to.
+
+MY CONTEXT, READ FIRST
+Read VOICE-DNA.md in this folder, top to bottom, before anything else. It is the only source of truth for my voice (markers, rhythm, vocabulary, banned words, signature phrases, format habits), my brand (section 8), and my business (section 9: what I sell, who I sell to, the result I deliver, my content pillars). Every sentence you produce must obey it. Never invent facts, results, numbers, client names, or stories about me. If a specific is missing and needed, use a clearly marked placeholder like [X%] and flag it at the end.
+
+STEP 1, RESEARCH (Apify)
+Using the Apify connector, research what is moving for my audience right now:
+a) What my ideal customers (section 9) are discussing this week: pains, debates, questions, news.
+b) What is trending inside my content pillars in the last 7 days.
+Bring back exactly 3 candidate ideas. For each: the insight in one line, why it matters right now, where you found it, and which pillar it serves.
+If Apify is not connected or a search fails, do not stop. Fall back to your own knowledge of my pillars and label each idea [NOT LIVE RESEARCH].
+
+STEP 2, CHOOSE
+Pick the strongest of the 3 using: relevance to my ideal customer, freshness, and my right to win the topic (my authority). State your pick and your reason in one line.
+
+STEP 3, WRITE (use the write-post skill standards)
+First write 5 hooks, each a different type: Result Lead, Confession, Contrarian Challenge, Curiosity Gap, Pattern Interrupt. Each under 12 words. Select the strongest yourself and say why in one sentence.
+Then write the full post in MY voice: the chosen hook unchanged, a rehook line that deepens the tension, body paragraphs of 3 lines maximum, exactly one CTA, and a P.S. as the most human line. Length 1,300 to 1,500 characters. Kill every pattern on the AI blacklist. Never use an em dash or en dash anywhere.
+
+STEP 4, SCORE
+Score the post on the Invisibility Diagnostic: Voice, POV, Specificity, Asking. If it is below 4/4, fix the failing dimension and rescore before continuing. Show the final score.
+
+STEP 5, THE VISUAL
+Write one complete, self-contained image-generation prompt for this post using my brand colors and platform size, ready to paste into any image tool.
+
+STEP 6, DELIVER
+Save everything into today-post.md in this folder: today's date, the idea and its source, the final post, the diagnostic score, 3 pinned comment options (one bonus insight, one audience question, one soft plug), and the image prompt. Then show me the post text in a copyable block and finish with one line: the idea you would run tomorrow.</pre>
+      <p class="note">Printed length is about 500 words. It chains research, choice, writing, scoring, visual, and delivery into one run. Change nothing on first use, tune it only after you have run it three times.</p>
+    </div>
+
+    <div class="step">
+      <p class="n">FLOW 4</p>
+      <h2>The routine: your standing order (runs locally)</h2>
+      <p>This is Level 3. The routine runs <strong>on your computer</strong>, so it needs the conditions below to be true, check all five:</p>
+      <ul class="checklist">
+        <li><span class="bx"></span><span><strong>Your computer is on and awake</strong> at the scheduled time (plugged in, lid open or sleep disabled for that hour).</span></li>
+        <li><span class="bx"></span><span><strong>Claude Code can run</strong>, you are signed in and the app opens without asking you anything.</span></li>
+        <li><span class="bx"></span><span><strong>Always the same folder.</strong> The routine must run inside my-marketing-agent, where VOICE-DNA.md lives.</span></li>
+        <li><span class="bx"></span><span><strong>VOICE-DNA.md exists and is current.</strong> The agent cannot sound like you while you sleep without the ledger.</span></li>
+        <li><span class="bx"></span><span><strong>Say the timezone.</strong> "7am" means your local 7am, name it when you set the routine.</span></li>
+      </ul>
+      <h3>Set it (paste in your agent folder)</h3>
+      <blockquote><button class="copy">Copy</button>Create a routine that runs locally on this computer every morning at 7am my time (timezone: [your timezone]) inside this folder. Each run: read VOICE-DNA.md, then execute the Master Prompt saved in master-prompt.md from research through delivery, and leave the finished post, score, pinned comments, and image prompt in today-post.md. If anything fails, write what happened into today-post.md instead of failing silently. Confirm the schedule back to me.</blockquote>
+      <p class="note">Save the Master Prompt from Flow 3 as <strong>master-prompt.md</strong> in your agent folder first, then the routine above can call it every morning. Ask your agent: "save the master prompt I just gave you as master-prompt.md".</p>
+      <h3>Not ready to schedule? The manual morning</h3>
+      <p>Same power, one action: open Claude Code in your folder each morning with coffee and say <em>"run my master prompt"</em>. Do that for three days. When you trust the output, set the routine and stop showing up.</p>
+      <div class="trigger"><span class="tn">RECAP</span><p><strong>Trigger 1</strong>, you ask. <strong>Trigger 2</strong>, it recognizes what you need. <strong>Trigger 3</strong>, the clock runs it. The routine is trigger 3, and it is what makes this an agent instead of a tool.</p></div>
+    </div>
+
+    <div class="step">
+      <p class="n">WHAT GOOD LOOKS LIKE</p>
+      <h2>Your first week</h2>
+      <table>
+        <thead><tr><th>Day</th><th>Do this</th></tr></thead>
+        <tbody>
+          <tr><td>Day 1</td><td>Install, extract your Voice DNA, write one post with the 5-hook gate, post it</td></tr>
+          <tr><td>Day 2</td><td>One carousel or image post, publish what the preview shows you</td></tr>
+          <tr><td>Day 3</td><td>Connect Apify, run the Master Prompt manually, feel the difference live research makes</td></tr>
+          <tr><td>Day 4-5</td><td>Run the Master Prompt each morning, tune your Voice DNA when anything sounds off</td></tr>
+          <tr><td>Day 6</td><td>Set the routine. From tomorrow, your agent works before you wake</td></tr>
+          <tr><td>Day 7</td><td>Build your offer, watch your Diamond score climb to 90+</td></tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 
   <footer>
@@ -136,6 +312,14 @@
 </div>
 
 <script>
+  document.querySelectorAll('.tabs .tab').forEach(t=>{
+    t.addEventListener('click',()=>{
+      document.querySelectorAll('.tabs .tab').forEach(x=>x.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      document.getElementById(t.dataset.panel).classList.add('active');
+    });
+  });
   document.querySelectorAll('.copy').forEach(btn=>{
     btn.addEventListener('click',e=>{
       e.stopPropagation();
