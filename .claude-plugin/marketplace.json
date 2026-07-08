@@ -1,0 +1,14 @@
+{
+  "name": "marketing-agent",
+  "owner": {
+    "name": "Daniel Paul",
+    "email": "danny@danielpaul.ai"
+  },
+  "plugins": [
+    {
+      "name": "marketing-agent",
+      "source": "./plugins/marketing-agent",
+      "description": "Your Marketing Agent OS. Extract your Voice DNA once, then every skill writes in your voice: posts, image prompts, carousels, and a complete offer."
+    }
+  ]
+}

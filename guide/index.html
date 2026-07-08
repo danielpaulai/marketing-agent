@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install Your Marketing Agent | Step by Step</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F6F3; --ink:#17171B; --body:#2C2C32; --red:#F01621;
+    --red-soft:#FCEBE9; --muted:#6B6B74; --border:#E5E3DE; --card:#FFFFFF; --green:#16844A;
+    --mono:"Space Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Rethink Sans",-apple-system,sans-serif;background:var(--paper);color:var(--body);line-height:1.6;font-size:17px}
+  .wrap{max-width:760px;margin:0 auto;padding:64px 24px 96px}
+  .micro{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:11.5px;color:var(--red);font-weight:700}
+  h1{font-size:clamp(34px,6vw,52px);font-weight:800;color:var(--ink);letter-spacing:-.02em;line-height:1.08;margin:14px 0 16px;text-wrap:balance}
+  h1 .red{color:var(--red)}
+  .lede{font-size:19px;color:var(--muted);max-width:52ch}
+  .rule{height:2px;background:var(--red);width:56px;margin:40px 0}
+
+  .step{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px;margin-bottom:22px;box-shadow:0 1px 3px rgba(23,23,27,.04)}
+  .step .n{font-family:var(--mono);font-size:12px;color:var(--red);font-weight:700;letter-spacing:.14em}
+  .step h2{font-size:24px;font-weight:800;color:var(--ink);margin:8px 0 10px;letter-spacing:-.01em}
+  .step p{margin-bottom:12px}
+  .step p strong{color:var(--ink)}
+  .step .note{font-size:14.5px;color:var(--muted);border-left:3px solid var(--border);padding-left:14px;margin-top:14px}
+
+  pre{background:var(--ink);color:#F5F4F1;border-radius:10px;padding:18px 56px 18px 20px;font-family:var(--mono);font-size:14px;line-height:1.9;overflow-x:auto;position:relative;margin:14px 0}
+  pre .c{color:#8a8a94}
+  .copy{position:absolute;top:10px;right:10px;background:#2C2C32;color:#F5F4F1;border:1px solid #44444c;border-radius:7px;font-family:var(--mono);font-size:11px;padding:5px 10px;cursor:pointer}
+  .copy:hover{background:var(--red);border-color:var(--red)}
+
+  blockquote{background:var(--red-soft);border-left:3px solid var(--red);border-radius:0 10px 10px 0;padding:16px 20px;font-size:16px;color:var(--ink);margin:14px 0;position:relative}
+  blockquote .copy{background:#fff;color:var(--ink);border-color:var(--border)}
+  blockquote .copy:hover{color:#fff}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15.5px}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0 12px 10px 0;border-bottom:2px solid var(--border)}
+  td{padding:12px 12px 12px 0;border-bottom:1px solid var(--border);vertical-align:top}
+  td:first-child{font-weight:700;color:var(--ink);white-space:nowrap}
+  td code{font-family:var(--mono);font-size:13px;background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:2px 8px}
+
+  .trigger{display:flex;gap:14px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--border)}
+  .trigger:last-child{border-bottom:none}
+  .trigger .tn{font-family:var(--mono);color:var(--red);font-weight:700;font-size:13px;white-space:nowrap}
+  .trigger p{margin:0}
+
+  details{border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:10px;background:var(--card)}
+  summary{font-weight:700;color:var(--ink);cursor:pointer}
+  details p{margin-top:10px;font-size:15.5px}
+
+  footer{text-align:center;margin-top:56px;color:var(--muted);font-size:14px}
+  footer .micro{display:block;margin-bottom:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="micro">The AI Marketing Agent Summit &middot; Take-Home Guide</p>
+  <h1>Install your <span class="red">Marketing Agent</span></h1>
+  <p class="lede">Five skills, one voice file, zero API keys. Ten minutes from here to an agent that writes like you. Measured once, fits forever.</p>
+  <div class="rule"></div>
+
+  <div class="step">
+    <p class="n">STEP 1</p>
+    <h2>Install Claude Code</h2>
+    <p><strong>Easiest path:</strong> download the Claude desktop app at <strong>claude.ai/download</strong>, it includes Claude Code.</p>
+    <p><strong>Or via terminal</strong> (Mac: open the Terminal app. Windows: open PowerShell):</p>
+    <pre><button class="copy">Copy</button>npm install -g @anthropic-ai/claude-code</pre>
+    <p class="note">You need a Claude account. Pro or Max gives you the room to run daily. If the npm command fails, install Node.js first from nodejs.org, then run it again.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">STEP 2</p>
+    <h2>Install the plugin (2 lines)</h2>
+    <p>In your terminal, run these two commands:</p>
+    <pre><button class="copy">Copy</button>claude plugin marketplace add danielpaulai/marketing-agent
+claude plugin install marketing-agent@marketing-agent</pre>
+    <p>That is the whole install. No API keys, no connectors, nothing to configure.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">STEP 3</p>
+    <h2>Get measured (once)</h2>
+    <p>Make a home for your agent and start Claude Code inside it:</p>
+    <pre><button class="copy">Copy</button>mkdir my-marketing-agent && cd my-marketing-agent
+claude</pre>
+    <p>Then say this, and attach or paste your material:</p>
+    <blockquote><button class="copy">Copy</button>Extract my voice. Here are 5 posts I wrote, a transcript of me talking, and a few client replies.</blockquote>
+    <p>The agent interviews you, analyzes your real writing, and saves <strong>VOICE-DNA.md</strong> in the folder. That file is the ledger. Every skill reads it first, so you never answer voice questions again.</p>
+    <p class="note">Bring real material: 5+ posts you wrote yourself, one voice note or call transcript, a few DM or email replies. The messier and more human, the better the extraction.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">STEP 4</p>
+    <h2>Run your skills</h2>
+    <table>
+      <thead><tr><th>Skill</th><th>What you get</th><th>Say this</th></tr></thead>
+      <tbody>
+        <tr><td>extract-voice</td><td>Your VOICE-DNA.md, the ledger</td><td>"Extract my voice"</td></tr>
+        <tr><td>write-post</td><td>A post in your voice + an animated preview</td><td>"Write me a post about X"</td></tr>
+        <tr><td>image-post</td><td>A ready-to-paste image prompt, on brand</td><td>"Image post about X"</td></tr>
+        <tr><td>build-carousel</td><td>A full carousel deck + a prompt per slide</td><td>"Make me a carousel about X"</td></tr>
+        <tr><td>build-offer</td><td>A guided interview + your animated offer document</td><td>"Build my offer"</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="step">
+    <p class="n">STEP 5</p>
+    <h2>Pull the trigger, three ways</h2>
+    <div class="trigger"><span class="tn">1 &middot; THE COMMAND</span><p>Type the request yourself. You pull the trigger. Great for tonight.</p></div>
+    <div class="trigger"><span class="tn">2 &middot; THE ASK</span><p>Just describe what you need: "I need a post for tomorrow." Claude reads every skill's description and fires the right one itself.</p></div>
+    <div class="trigger"><span class="tn">3 &middot; THE CLOCK</span><p>The standing order. Say it once, it runs forever, whether you show up or not. This is what makes it an agent.</p></div>
+    <p style="margin-top:18px"><strong>Set your standing order.</strong> In Claude Code, say:</p>
+    <blockquote><button class="copy">Copy</button>Create a routine: every morning at 7am, look at my business in VOICE-DNA.md, find one fresh, on-trend content idea for it, write the post in my voice using the write-post skill, and leave the post and an image prompt for it in a file called today-post.md.</blockquote>
+    <p>You wake up, open <strong>today-post.md</strong>, read it, post it. Done before coffee.</p>
+  </div>
+
+  <div class="step">
+    <p class="n">TROUBLE?</p>
+    <h2>Quick fixes</h2>
+    <details><summary>"claude: command not found"</summary><p>Claude Code is not installed yet or the terminal needs a restart. Close the terminal, open a new one, try again. If it persists, redo Step 1 (install Node.js first if npm is missing).</p></details>
+    <details><summary>The plugin install says marketplace not found</summary><p>Check the spelling: <code>danielpaulai/marketing-agent</code>. You need an internet connection, and Claude Code should be up to date: run <code>claude update</code>.</p></details>
+    <details><summary>My posts do not sound like me</summary><p>The ledger needs better measurements. Say "tune my Voice DNA" and tell the agent exactly what feels off, or rerun extract-voice with more real samples, especially a talking transcript.</p></details>
+    <details><summary>Where do the images come from?</summary><p>The image-post and carousel skills give you finished prompts, you paste them into any image tool you already use (gpt-image, Midjourney, and similar). No image account is required to use everything else.</p></details>
+  </div>
+
+  <footer>
+    <span class="micro">Measured once. Fits forever.</span>
+    Built for the AI Marketing Agent Summit &middot; AI School x NAS.com
+  </footer>
+</div>
+
+<script>
+  document.querySelectorAll('.copy').forEach(btn=>{
+    btn.addEventListener('click',e=>{
+      e.stopPropagation();
+      const host=btn.parentElement.cloneNode(true);
+      host.querySelector('.copy').remove();
+      navigator.clipboard.writeText(host.textContent.trim());
+      btn.textContent='Copied';
+      setTimeout(()=>btn.textContent='Copy',1600);
+    });
+  });
+</script>
+</body>
+</html>
