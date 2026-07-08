@@ -65,6 +65,8 @@
   .shot .chat-ai{background:var(--paper);border:1px solid var(--border);border-radius:10px 10px 10px 2px;padding:10px 14px;margin:8px 60px 8px 0;font-size:13.5px}
   .shot .chat-ai .mono{font-family:var(--mono);font-size:12px;color:var(--green)}
   .caption{font-size:13px;color:var(--muted);text-align:center;margin:-8px 0 16px;font-family:var(--mono)}
+  .cmdline{font-family:var(--mono);font-size:13.5px;background:var(--paper);border:1px solid var(--border);border-radius:10px;padding:11px 16px;margin:6px 0 14px;color:var(--ink)}
+  .cmdline b{color:var(--red)}
 
   table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}
   th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:left;padding:0 12px 10px 0;border-bottom:2px solid var(--border)}
@@ -177,7 +179,7 @@
       <p class="n">THE MAP</p>
       <h2>Install &rarr; Extract &rarr; Create &rarr; Connect &rarr; Automate</h2>
       <p>That is the whole system. You already installed. Now: extract your Voice DNA once, create with the skills daily, connect research when you are ready, and automate it with a routine. Each step below has the exact prompt to paste.</p>
-      <p class="note"><strong>Where this works:</strong> the plugin's skills run in Claude Code, in Cowork, AND in regular Claude chat (web and desktop). To call a skill anywhere, type <code class="k">/</code> in the message box (a skill picker opens, pick extract-voice, write-post, and so on), click the <strong>+</strong> button, or just describe what you want in plain words. All three fire the same skill.</p>
+      <p class="note"><strong>Where this works:</strong> the plugin's skills run in Claude Code, in Cowork, AND in regular Claude chat (web and desktop). To call a skill anywhere, type <code class="k">/</code> in the message box and the skill picker opens with all five: <code class="k">/extract-voice</code>, <code class="k">/write-post</code>, <code class="k">/image-post</code>, <code class="k">/build-carousel</code>, <code class="k">/build-offer</code>, click the <strong>+</strong> button, or just describe what you want in plain words. All three fire the same skill.</p>
     </div>
 
     <div class="step">
@@ -194,6 +196,8 @@
       </ul>
       <p class="note">Minimum to proceed: 5 posts or 500 total words. Below that the skill will tell you the samples are too thin and ask for more. Missing the transcript? It proceeds anyway and marks that layer to regenerate later. The messier and more human your samples, the better the extraction.</p>
 
+      <h3>How to call it</h3>
+      <p class="cmdline">Type <b>/extract-voice</b> and press Enter (or type <b>/</b> and pick it from the list). Then paste the prompt below with your material.</p>
       <h3>The prompt</h3>
       <blockquote><button class="copy">Copy</button>Extract my voice. Here is my raw material: [paste your 5+ posts, your transcript, and a few client replies]. My brand accent color is [hex or "pick one for me"], my name is [name], and my one-line tagline is [tagline].</blockquote>
 
@@ -221,6 +225,8 @@
     <div class="step">
       <p class="n">FLOW 2A &middot; WRITE-POST</p>
       <h2>Write a post, in full detail</h2>
+      <h3>How to call it</h3>
+      <p class="cmdline">Type <b>/write-post</b> and press Enter, or just paste the prompt below, the skill fires either way.</p>
       <h3>The prompt</h3>
       <blockquote><button class="copy">Copy</button>Write me a post about [your topic]. Raw material: [a story, a result, a belief, or a lesson, in your own rough words].</blockquote>
       <p><strong>What happens, beat by beat:</strong></p>
@@ -247,6 +253,8 @@
     <div class="step">
       <p class="n">FLOW 2B &middot; BUILD-CAROUSEL</p>
       <h2>Build a carousel</h2>
+      <h3>How to call it</h3>
+      <p class="cmdline">Type <b>/build-carousel</b>, or paste the prompt below.</p>
       <h3>The prompt</h3>
       <blockquote><button class="copy">Copy</button>Make me a LinkedIn carousel about [topic], 6 slides. Use my brand from VOICE-DNA.md.</blockquote>
       <p><strong>The flow:</strong></p>
@@ -262,6 +270,8 @@
     <div class="step">
       <p class="n">FLOW 2C &middot; IMAGE-POST</p>
       <h2>One image post</h2>
+      <h3>How to call it</h3>
+      <p class="cmdline">Type <b>/image-post</b>, or paste the prompt below.</p>
       <h3>The prompt</h3>
       <blockquote><button class="copy">Copy</button>Image post about [concept]. Platform: [LinkedIn or Instagram]. Text that must appear on the image: [your headline or stat, verbatim].</blockquote>
       <ul>
@@ -274,6 +284,8 @@
     <div class="step">
       <p class="n">FLOW 2D &middot; BUILD-OFFER</p>
       <h2>Build your offer (and watch the score climb)</h2>
+      <h3>How to call it</h3>
+      <p class="cmdline">Type <b>/build-offer</b>, or just say it. The interview starts either way.</p>
       <h3>The prompt</h3>
       <blockquote><button class="copy">Copy</button>Build my offer.</blockquote>
       <p><strong>What happens:</strong> a guided interview through 6 milestones, one at a time: your diagnosis (what you sell now and how it converts), your 10-word promise, your 10-second guarantee, your bonus stack, your payment plan, and your real reason to act now. Answer honestly, it coaches weak answers in a sentence or two.</p>
@@ -311,7 +323,7 @@ If Apify is not connected or a search fails, do not stop. Fall back to your own 
 STEP 2, CHOOSE
 Pick the strongest of the 3 using: relevance to my ideal customer, freshness, and my right to win the topic (my authority). State your pick and your reason in one line.
 
-STEP 3, WRITE (use the write-post skill standards)
+STEP 3, WRITE (use the /write-post skill standards)
 First write 5 hooks, each a different type: Result Lead, Confession, Contrarian Challenge, Curiosity Gap, Pattern Interrupt. Each under 12 words. Select the strongest yourself and say why in one sentence.
 Then write the full post in MY voice: the chosen hook unchanged, a rehook line that deepens the tension, body paragraphs of 3 lines maximum, exactly one CTA, and a P.S. as the most human line. Length 1,300 to 1,500 characters. Kill every pattern on the AI blacklist. Never use an em dash or en dash anywhere.
 
