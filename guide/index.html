@@ -229,6 +229,8 @@
       <p class="cmdline">Type <b>/write-post</b> and press Enter, or just paste the prompt below, the skill fires either way.</p>
       <h3>The prompt</h3>
       <blockquote><button class="copy">Copy</button>Write me a post about [your topic]. Raw material: [a story, a result, a belief, or a lesson, in your own rough words].</blockquote>
+      <h3>The pro prompt, with live research (Apify connected, see Flow 3)</h3>
+      <blockquote><button class="copy">Copy</button>Write me a post about [your topic]. Before writing anything, use Apify to research this topic for my audience (read VOICE-DNA.md section 9 for who they are): find one fresh stat, debate, or real example from the last 7 days that makes this post current, and note the source. If Apify is not connected or fails, use your own knowledge and label it [NOT LIVE]. Then run the full flow: 5 hooks with the research woven into at least two of them, I pick one, write the post in my voice with the fresh finding inside it, score it 4/4 on the diagnostic, and give me 3 pinned comments, one of which cites the source.</blockquote>
       <p><strong>What happens, beat by beat:</strong></p>
       <ul>
         <li><strong>The 5-hook gate comes first.</strong> Five hooks, five psychological types (Result Lead, Confession, Contrarian Challenge, Curiosity Gap, Pattern Interrupt), each under 12 words. Reply with a number, or say "use the strongest one".</li>
@@ -257,6 +259,8 @@
       <p class="cmdline">Type <b>/build-carousel</b>, or paste the prompt below.</p>
       <h3>The prompt</h3>
       <blockquote><button class="copy">Copy</button>Make me a LinkedIn carousel about [topic], 6 slides. Use my brand from VOICE-DNA.md.</blockquote>
+      <h3>The pro prompt, with live research (Apify connected)</h3>
+      <blockquote><button class="copy">Copy</button>Make me a LinkedIn carousel about [topic], 6 slides, my brand from VOICE-DNA.md. Before writing the deck, use Apify to research: the 2 or 3 most current stats or real examples on this topic (with sources) so the body slides carry real numbers instead of filler, and one popular take on this topic we can sharpen or counter on a slide. If Apify is not connected, proceed with what you know and mark unverified numbers as [VERIFY]. Then: the deck for my approval with the research placed slide by slide, the designed preview, one image prompt per slide, and a caption that credits the strongest source.</blockquote>
       <p><strong>The flow:</strong></p>
       <ul>
         <li><strong>1. The deck comes first</strong>: cover hook, body slides, CTA slide, plus a caption. You approve or tweak before anything else happens. Say "slide 3 needs a stronger title" and it fixes just that.</li>
@@ -274,6 +278,8 @@
       <p class="cmdline">Type <b>/image-post</b>, or paste the prompt below.</p>
       <h3>The prompt</h3>
       <blockquote><button class="copy">Copy</button>Image post about [concept]. Platform: [LinkedIn or Instagram]. Text that must appear on the image: [your headline or stat, verbatim].</blockquote>
+      <h3>The pro prompt, with live research (Apify connected)</h3>
+      <blockquote><button class="copy">Copy</button>Image post about [concept]. Platform: [LinkedIn or Instagram]. First, use Apify to find one current, verifiable number or fact on this topic that would stop the scroll, from the last 30 days, and tell me the source. That number becomes the headline text on the image, rendered verbatim. If Apify is not connected, ask me for the number instead of inventing one. Then produce the complete image prompt in my brand from VOICE-DNA.md, plus one alternative headline treatment of the same fact.</blockquote>
       <ul>
         <li>You get ONE complete, self-contained image prompt: exact size (1088x1360 LinkedIn portrait, 1088x1088 Instagram square), your brand colors, the text rendered verbatim with key words in your accent, and composition notes.</li>
         <li>Paste it into any image model you already use (gpt-image, Midjourney, DALL-E). Regenerate with small wording tweaks to steer.</li>
@@ -288,6 +294,8 @@
       <p class="cmdline">Type <b>/build-offer</b>, or just say it. The interview starts either way.</p>
       <h3>The prompt</h3>
       <blockquote><button class="copy">Copy</button>Build my offer.</blockquote>
+      <h3>The pro prompt, with live research (Apify connected)</h3>
+      <blockquote><button class="copy">Copy</button>Build my offer. Before the interview starts, use Apify to research two things and show me a short brief: 1) what my ideal customers (VOICE-DNA.md section 9) are complaining about and asking for right now, in their own words from posts and communities, and 2) how 2 or 3 competitors package similar offers, their promises, guarantees, and pricing where public. If Apify is not connected, skip the brief and say so. Then run the full interview, and use the research to pressure-test me: if my promise is weaker than what the market is asking for, or my guarantee is thinner than a competitor's, challenge me on it during the milestones, then score the Diamond out of 100 and run the rescore loop until I pass 90.</blockquote>
       <p><strong>What happens:</strong> a guided interview through 6 milestones, one at a time: your diagnosis (what you sell now and how it converts), your 10-word promise, your 10-second guarantee, your bonus stack, your payment plan, and your real reason to act now. Answer honestly, it coaches weak answers in a sentence or two.</p>
       <p><strong>Then the Diamond Score, out of 100:</strong> every facet scored with points and a traffic light (Promise and Guarantee are worth 30 each, they count double), one honest line per facet quoting your own words, and the single highest-leverage fix. Then <strong>the rescore loop</strong>: fix the weakest lever together, rescore, watch the number move. "54 &rarr; 78. That one fix bought you 24 points." Keep going to 90+.</p>
       <p><strong>The payoff:</strong> a complete, animated offer document with the Diamond on the cover, every facet colored, your score counting up, and your journey line (54 &rarr; 78 &rarr; 91) rendered on it.</p>
