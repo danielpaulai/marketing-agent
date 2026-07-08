@@ -18,6 +18,7 @@ Ask for whatever is missing, in one message:
 2. **One voice note transcript or call transcript** — at least 90 seconds of them talking. This captures their real spoken rhythm. A meeting transcript works.
 3. **DM or email replies to real clients** — 3 to 10. This captures their plain explaining voice.
 4. **Optional: brand basics** — one accent color (hex), light or dark preference, their name and one-line tagline. Stored so the visual skills stay on brand.
+5. **Optional: social profile links** — their LinkedIn, Instagram, Facebook, TikTok URLs. Stored in section 9 so research skills can scrape their profile and discover their competitors without asking again.
 
 **Minimum to proceed:** 5 posts OR 500 total words. Below that, say the samples are too thin to extract reliable patterns, ask for more, and offer a quick version if they insist.
 
@@ -72,6 +73,7 @@ ACCENT: [hex or "not set"] | BACKGROUND: [light/dark] | NAME: [...] | TAGLINE: [
 
 ## 9. Business (for the idea engine)
 SELLS: [what they sell, one line] | TO: [who exactly] | RESULT: [the outcome buyers want] | PILLARS: [2-4 content themes]
+PROFILES: [their LinkedIn / Instagram / Facebook / TikTok URLs, or "not set"]
 ```
 
 Always include "em dashes, en dashes" in the NEVER USE list, whatever else is there.
