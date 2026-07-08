@@ -65,34 +65,29 @@
   <div class="rule"></div>
 
   <div class="step">
+    <p class="n">BEFORE YOU START</p>
+    <h2>Two things you need</h2>
+    <p><strong>1. A Claude account.</strong> Pro or Max gives you the room to run this daily. Sign up at <strong>claude.ai</strong> if you have not already.</p>
+    <p><strong>2. The Claude Code desktop app.</strong> Download it at <strong>claude.ai/download</strong>, install it like any app, and sign in with your Claude account.</p>
+    <p>That is everything. No terminal, no developer tools, no API keys.</p>
+  </div>
+
+  <div class="step">
     <p class="n">STEP 1</p>
-    <h2>Install Claude Code</h2>
-    <p><strong>Easiest path:</strong> download the Claude desktop app at <strong>claude.ai/download</strong>, it includes Claude Code.</p>
-    <p><strong>Or via terminal</strong> (Mac: open the Terminal app. Windows: open PowerShell):</p>
-    <pre><button class="copy">Copy</button>npm install -g @anthropic-ai/claude-code</pre>
-    <p class="note">You need a Claude account. Pro or Max gives you the room to run daily. If the npm command fails, install Node.js first from nodejs.org, then run it again.</p>
+    <h2>Install the plugin (three clicks, no terminal)</h2>
+    <p>Open the Claude Code desktop app, then:</p>
+    <p>1. Type <code style="font-family:var(--mono);font-size:14px;background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:2px 8px">/plugin</code> in the message box and press Enter. The plugin manager opens.<br>
+    2. Choose <strong>Marketplaces, then Add marketplace</strong>, and paste this:</p>
+    <blockquote><button class="copy">Copy</button>danielpaulai/marketing-agent</blockquote>
+    <p>3. Go to <strong>Browse plugins</strong>, find <strong>marketing-agent</strong>, and click <strong>Install</strong>.</p>
+    <p>Done. No API keys, no connectors, nothing to configure.</p>
+    <p class="note">Prefer zero installs? Download the ZIP from github.com/danielpaulai/marketing-agent (green Code button, Download ZIP), unzip it, and open that folder in Claude Code. The skills work right there, no install at all.</p>
   </div>
 
   <div class="step">
     <p class="n">STEP 2</p>
-    <h2>Install the plugin, pick your path</h2>
-    <p><strong>Path A, terminal (2 lines).</strong> In your terminal, run:</p>
-    <pre><button class="copy">Copy</button>claude plugin marketplace add danielpaulai/marketing-agent
-claude plugin install marketing-agent@marketing-agent</pre>
-    <p><strong>Path B, desktop app (no terminal at all).</strong> In the Claude Code desktop app:</p>
-    <p>1. Type <code style="font-family:var(--mono);font-size:14px;background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:2px 8px">/plugin</code> in the message box and press Enter. The plugin manager opens.<br>
-    2. Choose <strong>Marketplaces, then Add marketplace</strong>, and paste: <strong>danielpaulai/marketing-agent</strong><br>
-    3. Go to <strong>Browse plugins</strong>, find <strong>marketing-agent</strong>, and click <strong>Install</strong>.</p>
-    <p>Either path, same result. No API keys, no connectors, nothing to configure.</p>
-    <p class="note">Allergic to installs completely? Download the repo as a zip from github.com/danielpaulai/marketing-agent (green Code button, Download ZIP), unzip it, and open Claude Code inside the unzipped folder. The skills work in that folder without any install.</p>
-  </div>
-
-  <div class="step">
-    <p class="n">STEP 3</p>
     <h2>Get measured (once)</h2>
-    <p>Make a home for your agent and start Claude Code inside it:</p>
-    <pre><button class="copy">Copy</button>mkdir my-marketing-agent && cd my-marketing-agent
-claude</pre>
+    <p>In the Claude Code desktop app, start a <strong>new session</strong> and choose a folder for your agent to live in. Make a new folder called <strong>my-marketing-agent</strong> when it asks where to work. This folder is your agent's home, everything it learns lives here.</p>
     <p>Then say this, and attach or paste your material:</p>
     <blockquote><button class="copy">Copy</button>Extract my voice. Here are 5 posts I wrote, a transcript of me talking, and a few client replies.</blockquote>
     <p>The agent interviews you, analyzes your real writing, and saves <strong>VOICE-DNA.md</strong> in the folder. That file is the ledger. Every skill reads it first, so you never answer voice questions again.</p>
@@ -100,7 +95,7 @@ claude</pre>
   </div>
 
   <div class="step">
-    <p class="n">STEP 4</p>
+    <p class="n">STEP 3</p>
     <h2>Run your skills</h2>
     <table>
       <thead><tr><th>Skill</th><th>What you get</th><th>Say this</th></tr></thead>
@@ -115,7 +110,7 @@ claude</pre>
   </div>
 
   <div class="step">
-    <p class="n">STEP 5</p>
+    <p class="n">STEP 4</p>
     <h2>Pull the trigger, three ways</h2>
     <div class="trigger"><span class="tn">1 &middot; THE COMMAND</span><p>Type the request yourself. You pull the trigger. Great for tonight.</p></div>
     <div class="trigger"><span class="tn">2 &middot; THE ASK</span><p>Just describe what you need: "I need a post for tomorrow." Claude reads every skill's description and fires the right one itself.</p></div>
@@ -128,8 +123,8 @@ claude</pre>
   <div class="step">
     <p class="n">TROUBLE?</p>
     <h2>Quick fixes</h2>
-    <details><summary>"claude: command not found"</summary><p>Claude Code is not installed yet or the terminal needs a restart. Close the terminal, open a new one, try again. If it persists, redo Step 1 (install Node.js first if npm is missing).</p></details>
-    <details><summary>The plugin install says marketplace not found</summary><p>Check the spelling: <code>danielpaulai/marketing-agent</code>. You need an internet connection, and Claude Code should be up to date: run <code>claude update</code>.</p></details>
+    <details><summary>I typed /plugin and nothing happened</summary><p>Make sure you are in the Claude Code part of the app (a session where you can chat with Claude about files), then type /plugin as the only text in the message box and press Enter. If it still does not open, update the app to the latest version and try again.</p></details>
+    <details><summary>The plugin install says marketplace not found</summary><p>Check the spelling: <code>danielpaulai/marketing-agent</code>. You need an internet connection, and the app should be up to date.</p></details>
     <details><summary>My posts do not sound like me</summary><p>The ledger needs better measurements. Say "tune my Voice DNA" and tell the agent exactly what feels off, or rerun extract-voice with more real samples, especially a talking transcript.</p></details>
     <details><summary>Where do the images come from?</summary><p>The image-post and carousel skills give you finished prompts, you paste them into any image tool you already use (gpt-image, Midjourney, and similar). No image account is required to use everything else.</p></details>
   </div>
