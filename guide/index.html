@@ -75,12 +75,12 @@
   <div class="step">
     <p class="n">STEP 1</p>
     <h2>Install the plugin (three clicks, no terminal)</h2>
-    <p>Open the Claude Code desktop app, then:</p>
-    <p>1. Type <code style="font-family:var(--mono);font-size:14px;background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:2px 8px">/plugin</code> in the message box and press Enter. The plugin manager opens.<br>
-    2. Choose <strong>Marketplaces, then Add marketplace</strong>, and paste this:</p>
-    <blockquote><button class="copy">Copy</button>danielpaulai/marketing-agent</blockquote>
-    <p>3. Go to <strong>Browse plugins</strong>, find <strong>marketing-agent</strong>, and click <strong>Install</strong>.</p>
-    <p>Done. No API keys, no connectors, nothing to configure.</p>
+    <p>Open the Claude Desktop app, then:</p>
+    <p>1. Open <strong>Settings, then Customize</strong>, and find <strong>Plugins</strong>.<br>
+    2. Choose <strong>Add marketplace</strong> (from a repository) and paste this URL:</p>
+    <blockquote><button class="copy">Copy</button>https://github.com/danielpaulai/marketing-agent</blockquote>
+    <p>3. Find <strong>marketing-agent</strong> in the list and click <strong>Install</strong>.</p>
+    <p>Done. The app pulls the plugin straight from the repository. No API keys, no connectors, nothing to configure.</p>
     <p class="note">Prefer zero installs? Download the ZIP from github.com/danielpaulai/marketing-agent (green Code button, Download ZIP), unzip it, and open that folder in Claude Code. The skills work right there, no install at all.</p>
   </div>
 
@@ -123,7 +123,7 @@
   <div class="step">
     <p class="n">TROUBLE?</p>
     <h2>Quick fixes</h2>
-    <details><summary>I typed /plugin and nothing happened</summary><p>Make sure you are in the Claude Code part of the app (a session where you can chat with Claude about files), then type /plugin as the only text in the message box and press Enter. If it still does not open, update the app to the latest version and try again.</p></details>
+    <details><summary>I cannot find Plugins in the app</summary><p>Look under Settings, then Customize, then Plugins. If you do not see it, you are likely on the free plan (Claude Code needs Pro or Max) or the app needs an update. In a terminal session of Claude Code, typing /plugin opens the same manager.</p></details>
     <details><summary>The plugin install says marketplace not found</summary><p>Check the spelling: <code>danielpaulai/marketing-agent</code>. You need an internet connection, and the app should be up to date.</p></details>
     <details><summary>My posts do not sound like me</summary><p>The ledger needs better measurements. Say "tune my Voice DNA" and tell the agent exactly what feels off, or rerun extract-voice with more real samples, especially a talking transcript.</p></details>
     <details><summary>Where do the images come from?</summary><p>The image-post and carousel skills give you finished prompts, you paste them into any image tool you already use (gpt-image, Midjourney, and similar). No image account is required to use everything else.</p></details>
