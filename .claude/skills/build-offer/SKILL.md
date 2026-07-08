@@ -17,7 +17,7 @@ If it does not exist, suggest once that extract-voice makes the final document s
 
 Go milestone by milestone. Ask the questions for ONE milestone, wait for the answers, reflect them back in one line, then move on. Keep it warm and fast. If an answer is weak, coach them in one or two sentences before moving on. Never invent facts, prices, results, names, or credentials the user did not give.
 
-Voice rules for everything you write in this skill: plain English, short sentences, warm and confident, zero hype, zero jargon. **Never use an em dash or en dash. Use commas, periods, or the word "and".** Nothing fake. Only use the facts the user provides; where something is missing you may propose a sensible placeholder and mark it clearly as `[SUGGESTED]`.
+Voice rules for everything you write in this skill: plain English, short sentences, warm and confident, zero hype, zero jargon. Before delivering the final document, run all copy against `references/ai-pattern-blacklist.md` and kill every flagged pattern; sanity-check the key sections against the Invisibility Diagnostic in `references/human-writing-standards.md`. **Never use an em dash or en dash. Use commas, periods, or the word "and".** Nothing fake. Only use the facts the user provides; where something is missing you may propose a sensible placeholder and mark it clearly as `[SUGGESTED]`.
 
 ### Milestone 1 — The Diagnosis (score what they have now)
 Ask:

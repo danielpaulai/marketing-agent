@@ -13,6 +13,9 @@ Before asking anything, look for `VOICE-DNA.md` in the working folder. If it exi
 
 If it does not exist, suggest once that extract-voice sets the voice and brand permanently, then proceed with the brief below.
 
+## Reference files
+Read `references/headline-frameworks.md` for cover-title patterns and `references/ai-pattern-blacklist.md` to kill AI-sounding copy before it reaches a slide.
+
 ## Gather the brief (one message)
 Ask for whatever is missing:
 1. **Topic / angle** and any specifics (a belief, a result, a framework, real numbers).
@@ -57,6 +60,17 @@ Each prompt should specify:
 
 ### Instagram template (cleaner, no header)
 Same 4:5 (or square 1:1 if they prefer), one cohesive palette, headline and body rendered verbatim, one concrete real visual, a small slide number in a corner, no profile header and no repost badge. Keep it clean, premium, editorial.
+
+## Step 3, Render the deck preview artifact (before they spend image credits)
+
+After the deck is approved and before or alongside the prompts, build a single-file **React + GSAP artifact** that previews the whole carousel as designed slide cards, so they SEE the deck before generating a single image:
+
+- Each slide as a 4:5 card in a horizontally scrollable row (or responsive grid), styled with the exact palette: background, the ONE accent, high-contrast text.
+- LinkedIn template: mock the locked header (avatar circle with initials, name, tagline) and the ">>>" swipe chevron; last slide gets the "Follow for more" pill.
+- Title rendered with the key words in the accent color, body as short lines with accent markers, and the visual described inside a clearly styled placeholder box ("CHART: [what it shows]").
+- GSAP: slides stagger in on load, subtle hover lift, a small slide counter. Load GSAP via ESM, render fine without it, respect `prefers-reduced-motion`. Rethink Sans + Space Mono, never em dashes.
+
+This preview is for approval and sharing, the prompts remain the production path.
 
 Present the prompts clearly numbered ("Slide 1 prompt", "Slide 2 prompt", ...) in copyable code blocks, plus the caption. Tell the user to generate each at 1088x1360 (4:5) with a high-quality image model, keep the same palette and header across all slides, and, for LinkedIn, combine the finished slide images into a single PDF to post as a document.
 

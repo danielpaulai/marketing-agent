@@ -32,4 +32,4 @@ Produce a single, self-contained, copyable prompt that specifies:
 
 Present the final prompt in a copyable code block. Tell the user the exact size to generate at, and that they can regenerate with small wording tweaks to steer the result.
 
-Offer to write variations (a different headline, layout, or a matching set), or to turn it into a multi-slide carousel.
+Offer to write variations (a different headline, layout, or a matching set), to turn it into a multi-slide carousel, or to render a quick HTML mock of the layout (headline hierarchy, palette, composition zones) so they can sanity-check the design before spending an image generation.
