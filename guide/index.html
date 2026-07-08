@@ -274,8 +274,13 @@ Save everything into today-post.md in this folder: today's date, the idea and it
 
     <div class="step">
       <p class="n">FLOW 4</p>
-      <h2>The routine: your standing order (runs locally)</h2>
-      <p>This is Level 3. The routine runs <strong>on your computer</strong>, so it needs the conditions below to be true, check all five:</p>
+      <h2>The routine: your standing order</h2>
+      <p>This is Level 3, and you have two ways to set it. Pick one.</p>
+      <h3>Option A, the remote routine (Cowork, the easy one)</h3>
+      <p>Cowork is the no-terminal face of the same engine, in the same app: in the message box, select <strong>Cowork</strong> instead of Chat. Your plugin's skills work there too. Then type <code class="k">/schedule</code> and describe the daily task (use the routine prompt below). <strong>Cowork scheduled tasks run on Anthropic's servers, your laptop can be closed and asleep.</strong> This is the true "works while you sleep" option.</p>
+      <p class="note">Cowork uses more of your plan's usage than chat, one daily post is fine. Keep the desktop app for anything that needs your local folder.</p>
+      <h3>Option B, the local routine (Claude Code)</h3>
+      <p>The routine runs <strong>on your computer</strong>, so it needs the conditions below to be true, check all five:</p>
       <ul class="checklist">
         <li><span class="bx"></span><span><strong>Your computer is on and awake</strong> at the scheduled time (plugged in, lid open or sleep disabled for that hour).</span></li>
         <li><span class="bx"></span><span><strong>Claude Code can run</strong>, you are signed in and the app opens without asking you anything.</span></li>
@@ -283,7 +288,7 @@ Save everything into today-post.md in this folder: today's date, the idea and it
         <li><span class="bx"></span><span><strong>VOICE-DNA.md exists and is current.</strong> The agent cannot sound like you while you sleep without the ledger.</span></li>
         <li><span class="bx"></span><span><strong>Say the timezone.</strong> "7am" means your local 7am, name it when you set the routine.</span></li>
       </ul>
-      <h3>Set it (paste in your agent folder)</h3>
+      <h3>Set it (paste in your agent folder, or into /schedule in Cowork)</h3>
       <blockquote><button class="copy">Copy</button>Create a routine that runs locally on this computer every morning at 7am my time (timezone: [your timezone]) inside this folder. Each run: read VOICE-DNA.md, then execute the Master Prompt saved in master-prompt.md from research through delivery, and leave the finished post, score, pinned comments, and image prompt in today-post.md. If anything fails, write what happened into today-post.md instead of failing silently. Confirm the schedule back to me.</blockquote>
       <p class="note">Save the Master Prompt from Flow 3 as <strong>master-prompt.md</strong> in your agent folder first, then the routine above can call it every morning. Ask your agent: "save the master prompt I just gave you as master-prompt.md".</p>
       <h3>Not ready to schedule? The manual morning</h3>
